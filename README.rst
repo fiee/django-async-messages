@@ -108,6 +108,16 @@ Send multiple messages to a single user::
     >>> # do more awesome stuff
     >>> message_user(barry, "Barry, your report is ready") 
 
+Alternative way to send a message to a single user, imitating the django.contrib.messages API::
+
+    >>> from async_messages import messages
+    >>> barry = User.objects.get(username='barry')
+    >>> messages.debug(barry, "Barry was here")
+    >>> messages.info(barry, "Hi, Barry")
+    >>> messages.success(barry, "Barry, your report is ready")
+    >>> messages.warning(barry, "Barry, you didn't lock your session")
+    >>> messages.error(barry, "You are not Barry")
+
 Contributing
 ============
 
@@ -130,6 +140,10 @@ MIT_
 
 Changelog
 =========
+
+0.3
+---
+* Mimic ``django.contrib.messages`` API for sending a message to a user
 
 0.2
 ---
