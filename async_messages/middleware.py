@@ -1,6 +1,7 @@
 from django.contrib import messages
-
 from async_messages import get_messages
+import logging
+logger = logging.getLogger('async_messages')
 
 
 class AsyncMiddleware(object):
@@ -10,9 +11,12 @@ class AsyncMiddleware(object):
         Check for messages for this user and, if it exists,
         call the messages API with it
         """
-        if hasattr(request, "session") and hasattr(request, "user") and request.user.is_authenticated():
-            msgs = get_messages(request.user)
-            if msgs:
-                for msg, level in msgs:
-                    messages.add_message(request, level, msg)
+        try:
+            if hasattr(request, "session") and hasattr(request, "user") and request.user.is_authenticated():
+                msgs = get_messages(request.user)
+                if msgs:
+                    for msg, level in msgs:
+                        messages.add_message(request, level, msg)
+        except Exception as ex:
+            logger.exception(ex)
         return response

@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import sys
 import os
-
+from django.test.runner import DiscoverRunner
 from django.conf import settings, global_settings
 
 if not settings.configured:
@@ -28,8 +28,6 @@ if not settings.configured:
             SITE_ID=1,
         )
 
-from django.test.simple import DjangoTestSuiteRunner
-
 
 def run_tests():
     # Modify path
@@ -37,7 +35,7 @@ def run_tests():
     sys.path.insert(0, parent)
 
     # Run tests
-    test_runner = DjangoTestSuiteRunner(verbosity=2)
+    test_runner = DiscoverRunner(verbosity=2)
     failures = test_runner.run_tests(['tests'])
     sys.exit(failures)
 

@@ -131,6 +131,14 @@ Run tests with::
 
 Please submit pull requests using 'develop' as the target branch.
 
+Authors
+=======
+
+* Nicolas Patry, <nicolas.patry@centraliens.net> (main author)
+* Henning Hraban Ramm, <hraban@fiee.net> (i18n, fixes)
+* Gonzalo Delgado, <mail@gonzalodelgado.com.ar> (form)
+et al.
+
 License
 =======
 
@@ -140,6 +148,11 @@ MIT_
 
 Changelog
 =========
+
+0.3.2
+-----
+* Adaptions for Django 1.10
+* Catch exceptions in middleware
 
 0.3.1
 -----

@@ -1,7 +1,7 @@
 from django.test import TestCase
 from django.test.client import Client
 from django.contrib.auth.models import User
-from django.contrib.messages import constants, set_level
+from django.contrib.messages import constants
 
 from async_messages import message_user, message_users, messages
 
