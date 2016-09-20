@@ -131,14 +131,6 @@ Run tests with::
 
 Please submit pull requests using 'develop' as the target branch.
 
-Authors
-=======
-
-* Nicolas Patry, <nicolas.patry@centraliens.net> (main author)
-* Henning Hraban Ramm, <hraban@fiee.net> (i18n, fixes)
-* Gonzalo Delgado, <mail@gonzalodelgado.com.ar> (form)
-et al.
-
 License
 =======
 
