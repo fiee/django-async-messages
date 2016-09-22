@@ -38,10 +38,10 @@ Yes, there are - but they solve the problem in different ways:
 * `django-offline-messages`_ - this provides an alternative storage backend that
   Django's messages framework can use.
 
-* `django-notifications`_  
+* `pinax-notifications`_  
 
 .. _`django-offline-messages`: https://github.com/dym/django-offline-messages
-.. _`django-notifications`: https://github.com/jtauber/django-notification
+.. _`pinax-notifications`: https://github.com/pinax/pinax-notifications
 
 What's good about this implementation?
 --------------------------------------
